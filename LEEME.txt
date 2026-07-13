@@ -1,0 +1,38 @@
+CÓMO USAR ESTE SITIO
+=====================
+
+1) PONELE EL NOMBRE
+   Abrí index.html y buscá "[NOMBRE]" (Ctrl+F). Aparece en:
+   - <title> y meta description (SEO)
+   - El JSON-LD (los datos que lee Google, campo "name")
+   - El logo del menú (<a class="logo">)
+   Reemplazalo por el nombre real del hospedaje en las 4 apariciones.
+
+2) SUBIRLO A INTERNET (gratis)
+   Opción más simple: Netlify Drop
+   → https://app.netlify.com/drop
+   Arrastrás la carpeta completa (index.html + carpeta images) y te da un link al toque.
+
+   Alternativa: Vercel, GitHub Pages, o subirlo a un hosting con FTP.
+   Como es HTML/CSS/JS puro, funciona en cualquier hosting estático sin configuración.
+
+3) DOMINIO PROPIO (recomendado para SEO)
+   Si querés un dominio tipo "hospedajevillagesell.com.ar", lo comprás en NIC.ar
+   (para .com.ar) o en Namecheap/GoDaddy para .com, y lo apuntás al hosting.
+
+4) PARA QUE APAREZCA EN GOOGLE
+   - Dado de alta en Google Business Profile (perfil de negocio) con la dirección exacta,
+     fotos y horario. Esto es lo que MÁS impacta en aparecer en búsquedas locales
+     tipo "hospedaje Villa Gesell".
+   - Una vez publicado el sitio, cargalo en Google Search Console para que lo indexe rápido.
+   - El sitio ya tiene meta tags, Open Graph y datos estructurados (JSON-LD) listos.
+
+5) EDITAR TEXTOS O FOTOS
+   Los textos están directo en el HTML (buscá la sección por su comentario <!-- ... -->).
+   Las fotos están en /images con nombres descriptivos (fachada.jpg, patio.jpg, etc.)
+   así que podés reemplazarlas por otras del mismo nombre sin tocar el código.
+
+6) WHATSAPP
+   El botón flotante y todos los CTA ya apuntan a:
+   https://wa.me/542255509346
+   Si cambia el número, hay que reemplazarlo en varios lugares del HTML (buscá "542255509346").

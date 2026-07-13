@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>[NOMBRE] · Hospedaje en Villa Gesell, a metros del mar</title>
+<meta name="description" content="Habitaciones privadas con baño propio en Villa Gesell, a 6 cuadras del mar y 3 del centro. TV, wifi, cocina, parrilla y quincho compartido. Desde $20.000 por persona por día. Reservá por WhatsApp.">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="[NOMBRE] · Hospedaje en Villa Gesell">
+<meta property="og:description" content="A 6 cuadras del mar y 3 del centro. Habitaciones privadas con baño, wifi, cocina y parrilla compartida. Desde $20.000 por persona por día.">
+<meta property="og:image" content="images/fachada.jpg">
+<meta property="og:locale" content="es_AR">
+
+<!-- TODO: reemplazar [NOMBRE] en todo el archivo por el nombre real del hospedaje -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,500;1,9..144,600&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LodgingBusiness",
+  "name": "[NOMBRE]",
+  "image": "images/fachada.jpg",
+  "priceRange": "$20000 ARS por persona por día",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Paseo 105 Nº 626",
+    "addressLocality": "Villa Gesell",
+    "addressRegion": "Buenos Aires",
+    "addressCountry": "AR"
+  },
+  "telephone": "+542255509346",
+  "amenityFeature": [
+    {"@type": "LocationFeatureSpecification", "name": "Baño privado"},
+    {"@type": "LocationFeatureSpecification", "name": "Wifi"},
+    {"@type": "LocationFeatureSpecification", "name": "TV"},
+    {"@type": "LocationFeatureSpecification", "name": "Cocina compartida"},
+    {"@type": "LocationFeatureSpecification", "name": "Parrilla"}
+  ]
+}
+</script>
+
+<style>
+  :root{
+    --sand:#F1E8D8;
+    --sand-dim:#E8DCC6;
+    --pine:#2C4A3E;
+    --pine-deep:#1C332A;
+    --dune:#C9A876;
+    --ocean:#3E7C7C;
+    --coral:#E4633B;
+    --ink:#22302A;
+    --paper:#FBF7EF;
+    --max: 1120px;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important;}
+  }
+
+  body{
+    margin:0;
+    background:var(--sand);
+    color:var(--ink);
+    font-family:'Inter',sans-serif;
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  h1,h2,h3{
+    font-family:'Fraunces',serif;
+    font-weight:700;
+    line-height:1.05;
+    margin:0 0 0.4em 0;
+    letter-spacing:-0.01em;
+  }
+
+  .eyebrow{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:0.72rem;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--ocean);
+    font-weight:600;
+  }
+
+  a{color:inherit;}
+  img{max-width:100%; display:block;}
+  .wrap{max-width:var(--max); margin:0 auto; padding:0 1.5rem;}
+
+  :focus-visible{
+    outline:3px solid var(--coral);
+    outline-offset:3px;
+  }
+
+  /* ---------- NAV ---------- */
+  header.nav{
+    position:sticky; top:0; z-index:50;
+    background:rgba(241,232,216,0.92);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid rgba(44,74,62,0.12);
+  }
+  .nav-inner{
+    display:flex; align-items:center; justify-content:space-between;
+    padding:0.9rem 1.5rem;
+    max-width:var(--max); margin:0 auto;
+  }
+  .logo{
+    font-family:'Fraunces',serif;
+    font-weight:700; font-size:1.15rem;
+    color:var(--pine-deep);
+    text-decoration:none;
+  }
+  .nav-links{display:none; gap:1.6rem; list-style:none; margin:0; padding:0;}
+  .nav-links a{
+    font-size:0.85rem; font-weight:600; text-decoration:none;
+    color:var(--pine-deep);
+  }
+  @media(min-width:820px){ .nav-links{display:flex; align-items:center;} }
+
+  .btn{
+    display:inline-flex; align-items:center; gap:0.5rem;
+    background:var(--coral); color:var(--paper);
+    font-weight:700; font-size:0.9rem;
+    padding:0.75rem 1.3rem; border-radius:100px;
+    text-decoration:none; border:none; cursor:pointer;
+    box-shadow:0 6px 16px rgba(228,99,59,0.35);
+    transition:transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .btn:hover{ transform:translateY(-2px); box-shadow:0 10px 20px rgba(228,99,59,0.4); }
+  .btn svg{width:18px; height:18px;}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    position:relative;
+    min-height:92vh;
+    display:flex; align-items:flex-end;
+    background:linear-gradient(180deg, rgba(28,51,42,0.25) 0%, rgba(28,51,42,0.55) 65%, rgba(20,36,29,0.92) 100%), url('images/fachada.jpg') center/cover no-repeat;
+    color:var(--paper);
+  }
+  .hero-inner{ padding:3.5rem 1.5rem 3rem; max-width:var(--max); margin:0 auto; width:100%; }
+  .hero .eyebrow{ color:var(--dune); }
+  .hero h1{
+    font-size:clamp(2.4rem, 6vw, 4.2rem);
+    max-width:14ch;
+    color:var(--paper);
+  }
+  .hero p.lede{
+    font-size:1.05rem; max-width:44ch; color:var(--sand-dim);
+    margin:0.8rem 0 1.8rem;
+  }
+  .badges{ display:flex; flex-wrap:wrap; gap:0.6rem; margin-bottom:1.8rem; }
+  .badge{
+    font-family:'IBM Plex Mono',monospace;
+    font-size:0.78rem; font-weight:600;
+    border:1px solid rgba(251,247,239,0.4);
+    padding:0.4rem 0.8rem; border-radius:100px;
+    display:inline-flex; align-items:center; gap:0.4rem;
+  }
+  .hero-ctas{ display:flex; flex-wrap:wrap; gap:0.8rem; }
+  .btn-ghost{
+    background:transparent; color:var(--paper);
+    border:1.5px solid rgba(251,247,239,0.55);
+    box-shadow:none;
+  }
+
+  /* ---------- DIVIDERS (signature element) ---------- */
+  .divider{ display:block; width:100%; height:auto; }
+  .divider-pines{ background:var(--pine-deep); }
+  .divider-dunas{ background:var(--sand); }
+  .divider-mar{ background:var(--paper); }
+
+  /* ---------- SECTIONS ---------- */
+  section{ padding:4.5rem 0; }
+  .section-head{ max-width:56ch; margin-bottom:2.5rem; }
+  .section-head h2{ font-size:clamp(1.8rem, 3.6vw, 2.6rem); color:var(--pine-deep); }
+  .section-head p{ color:#4C5A52; font-size:1.02rem; }
+
+  .bg-pine{ background:var(--pine-deep); color:var(--sand); }
+  .bg-pine .section-head h2{ color:var(--paper); }
+  .bg-pine .section-head p{ color:#B9CBC1; }
+  .bg-paper{ background:var(--paper); }
+
+  /* amenities */
+  .amenities{
+    display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:1.4rem;
+  }
+  .amenity{
+    background:rgba(251,247,239,0.06);
+    border:1px solid rgba(251,247,239,0.14);
+    border-radius:14px; padding:1.4rem 1.2rem;
+  }
+  .bg-paper .amenity{
+    background:var(--sand); border-color:rgba(44,74,62,0.1);
+  }
+  .amenity svg{ width:28px; height:28px; color:var(--dune); margin-bottom:0.7rem; }
+  .amenity h3{ font-size:1.02rem; font-family:'Inter',sans-serif; font-weight:700; margin-bottom:0.25rem; }
+  .amenity p{ margin:0; font-size:0.9rem; color:inherit; opacity:0.82; }
+
+  /* gallery */
+  .gallery{
+    display:grid; gap:1rem;
+    grid-template-columns:repeat(6,1fr);
+  }
+  .gallery figure{ margin:0; border-radius:16px; overflow:hidden; position:relative; background:var(--sand-dim); }
+  .gallery img{ width:100%; height:100%; object-fit:cover; }
+  .gallery figcaption{
+    position:absolute; left:0; right:0; bottom:0;
+    background:linear-gradient(0deg, rgba(28,51,42,0.82), rgba(28,51,42,0));
+    color:var(--paper); font-size:0.85rem; font-weight:600;
+    padding:1.6rem 0.9rem 0.7rem;
+  }
+  .g-a{ grid-column:span 3; aspect-ratio:4/3; }
+  .g-b{ grid-column:span 3; aspect-ratio:4/3; }
+  .g-c{ grid-column:span 2; aspect-ratio:3/4; }
+  .g-d{ grid-column:span 2; aspect-ratio:3/4; }
+  .g-e{ grid-column:span 2; aspect-ratio:3/4; }
+  @media(max-width:720px){
+    .gallery{ grid-template-columns:repeat(2,1fr); }
+    .g-a,.g-b{ grid-column:span 2; aspect-ratio:16/10; }
+    .g-c,.g-d,.g-e{ grid-column:span 1; aspect-ratio:3/4; }
+  }
+
+  /* ubicacion */
+  .location{
+    display:grid; grid-template-columns:1fr; gap:2rem;
+  }
+  @media(min-width:900px){ .location{ grid-template-columns:1fr 1fr; align-items:center; } }
+  .location-map{ border-radius:16px; overflow:hidden; border:1px solid rgba(44,74,62,0.15); }
+  .location-map iframe{ width:100%; height:340px; border:0; display:block; }
+  .distance-list{ list-style:none; margin:1.6rem 0 0; padding:0; display:flex; flex-direction:column; gap:0.9rem; }
+  .distance-list li{ display:flex; gap:0.9rem; align-items:flex-start; font-size:1rem; }
+  .distance-list svg{ width:22px; height:22px; color:var(--ocean); flex:none; margin-top:0.15rem; }
+  address{ font-style:normal; }
+
+  /* precio */
+  .price-wrap{ display:flex; flex-wrap:wrap; gap:2.4rem; align-items:center; }
+  .price-tag{
+    background:var(--dune); color:var(--pine-deep);
+    border-radius:18px; padding:1.8rem 2.2rem;
+    transform:rotate(-2deg);
+    box-shadow:0 14px 30px rgba(44,74,62,0.18);
+    position:relative;
+    font-family:'IBM Plex Mono',monospace;
+    min-width:230px;
+  }
+  .price-tag::before{
+    content:"";
+    position:absolute; top:-10px; left:28px;
+    width:20px; height:20px; border-radius:50%;
+    background:var(--sand); border:3px solid var(--pine-deep);
+  }
+  .price-tag .amount{
+    font-family:'Fraunces',serif; font-weight:900; font-size:2.6rem;
+    color:var(--pine-deep); display:block; line-height:1;
+  }
+  .price-tag .unit{ font-size:0.8rem; font-weight:600; letter-spacing:0.04em; }
+  .payment-methods{ display:flex; flex-direction:column; gap:0.9rem; }
+  .payment-methods .item{ display:flex; align-items:center; gap:0.7rem; font-weight:600; }
+  .payment-methods svg{ width:22px; height:22px; color:var(--ocean); }
+
+  /* contacto / footer */
+  footer{
+    background:var(--pine-deep); color:var(--sand-dim);
+    padding:3.6rem 0 2rem;
+  }
+  .footer-cta{
+    display:flex; flex-direction:column; align-items:flex-start; gap:1.2rem;
+    border-bottom:1px solid rgba(251,247,239,0.15);
+    padding-bottom:2.4rem; margin-bottom:1.6rem;
+  }
+  .footer-cta h2{ color:var(--paper); font-size:clamp(1.6rem,3.4vw,2.2rem); max-width:18ch; }
+  .footer-grid{ display:flex; flex-wrap:wrap; justify-content:space-between; gap:1.5rem; font-size:0.88rem; }
+  .footer-grid a{ text-decoration:none; }
+  .footer-grid strong{ display:block; color:var(--dune); font-family:'IBM Plex Mono',monospace; font-size:0.72rem; letter-spacing:0.1em; text-transform:uppercase; margin-bottom:0.4rem; }
+
+  /* floating whatsapp */
+  .float-wa{
+    position:fixed; right:1.1rem; bottom:1.1rem; z-index:60;
+    background:#25D366; color:#fff;
+    width:58px; height:58px; border-radius:50%;
+    display:flex; align-items:center; justify-content:center;
+    box-shadow:0 8px 20px rgba(0,0,0,0.25);
+    text-decoration:none;
+  }
+  .float-wa svg{ width:28px; height:28px; }
+
+  /* reveal on scroll */
+  .reveal{ opacity:0; transform:translateY(18px); transition:opacity 0.6s ease, transform 0.6s ease; }
+  .reveal.is-visible{ opacity:1; transform:none; }
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <a href="#top" class="logo">[NOMBRE]</a>
+    <ul class="nav-links">
+      <li><a href="#habitaciones">Habitaciones</a></li>
+      <li><a href="#espacios">Espacios</a></li>
+      <li><a href="#ubicacion">Ubicación</a></li>
+      <li><a href="#precio">Precio</a></li>
+      <li>
+        <a class="btn" href="https://wa.me/542255509346?text=Hola!%20Quiero%20consultar%20disponibilidad" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.36 5.07L2 22l5.11-1.34A9.94 9.94 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2Zm0 18c-1.63 0-3.15-.44-4.46-1.2l-.32-.19-3.03.8.81-2.95-.21-.31A7.94 7.94 0 0 1 4 12c0-4.41 3.59-8 8-8s8 3.59 8 8-3.59 8-8 8Zm4.4-5.85c-.24-.12-1.43-.7-1.65-.78-.22-.08-.38-.12-.54.12-.16.24-.62.78-.76.94-.14.16-.28.18-.52.06-.24-.12-1.02-.38-1.94-1.2-.72-.64-1.2-1.43-1.34-1.67-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.2-.47-.4-.4-.54-.41h-.46c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.7 2.6 4.12 3.64.58.25 1.03.4 1.38.51.58.18 1.11.16 1.53.1.47-.07 1.43-.58 1.63-1.15.2-.57.2-1.05.14-1.15-.06-.1-.22-.16-.46-.28Z"/></svg>
+          WhatsApp
+        </a>
+      </li>
+    </ul>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <span class="eyebrow">Villa Gesell · Paseo 105</span>
+      <h1>Tu descanso queda cerca de todo.</h1>
+      <p class="lede">Habitaciones privadas con baño propio, a metros del mar y del centro. Wifi, TV, cocina y parrilla compartida para que no te falte nada en la estadía.</p>
+      <div class="badges">
+        <span class="badge">🌊 6 cuadras al mar</span>
+        <span class="badge">🏙️ 3 cuadras al centro</span>
+        <span class="badge">💵 Desde $20.000 por persona/día</span>
+      </div>
+      <div class="hero-ctas">
+        <a class="btn" href="https://wa.me/542255509346?text=Hola!%20Quiero%20consultar%20disponibilidad" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.36 5.07L2 22l5.11-1.34A9.94 9.94 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2Zm0 18c-1.63 0-3.15-.44-4.46-1.2l-.32-.19-3.03.8.81-2.95-.21-.31A7.94 7.94 0 0 1 4 12c0-4.41 3.59-8 8-8s8 3.59 8 8-3.59 8-8 8Zm4.4-5.85c-.24-.12-1.43-.7-1.65-.78-.22-.08-.38-.12-.54.12-.16.24-.62.78-.76.94-.14.16-.28.18-.52.06-.24-.12-1.02-.38-1.94-1.2-.72-.64-1.2-1.43-1.34-1.67-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.2-.47-.4-.4-.54-.41h-.46c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.7 2.6 4.12 3.64.58.25 1.03.4 1.38.51.58.18 1.11.16 1.53.1.47-.07 1.43-.58 1.63-1.15.2-.57.2-1.05.14-1.15-.06-.1-.22-.16-.46-.28Z"/></svg>
+          Reservar por WhatsApp
+        </a>
+        <a class="btn btn-ghost" href="#habitaciones">Ver habitaciones</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- divider: pinares -->
+  <svg class="divider divider-pines" viewBox="0 0 1200 90" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <rect width="1200" height="90" fill="#1C332A"/>
+    <g fill="#2C4A3E">
+      <polygon points="40,90 70,20 100,90"/>
+      <polygon points="90,90 120,10 150,90"/>
+      <polygon points="160,90 185,35 210,90"/>
+      <polygon points="260,90 295,15 330,90"/>
+      <polygon points="330,90 355,40 380,90"/>
+      <polygon points="440,90 470,22 500,90"/>
+      <polygon points="560,90 585,38 610,90"/>
+      <polygon points="640,90 675,12 710,90"/>
+      <polygon points="720,90 745,42 770,90"/>
+      <polygon points="820,90 855,18 890,90"/>
+      <polygon points="900,90 925,40 950,90"/>
+      <polygon points="1000,90 1035,14 1070,90"/>
+      <polygon points="1080,90 1105,44 1130,90"/>
+      <polygon points="1140,90 1165,30 1190,90"/>
+    </g>
+  </svg>
+
+  <!-- ESPACIOS / AMENITIES -->
+  <section id="espacios" class="bg-pine">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">Lo que incluye</span>
+        <h2>Todo pensado para quedarte, no para pasar de paso.</h2>
+        <p>Cada habitación es privada. Los espacios de cocina, comidas y descanso al aire libre se comparten con el resto de los huéspedes.</p>
+      </div>
+      <div class="amenities">
+        <div class="amenity reveal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="10" width="18" height="9" rx="1.5"/><path d="M5 10V7a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v3"/><circle cx="12" cy="4.2" r="1"/></svg>
+          <h3>Baño privado</h3>
+          <p>Cada habitación tiene su propio baño, sin compartir con otros huéspedes.</p>
+        </div>
+        <div class="amenity reveal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="4" width="20" height="14" rx="2"/><path d="M8 21h8M12 18v3"/></svg>
+          <h3>TV en la habitación</h3>
+          <p>Para relajar después de la playa, sin salir del cuarto.</p>
+        </div>
+        <div class="amenity reveal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 8.5a15 15 0 0 1 20 0M5.5 12a10 10 0 0 1 13 0M9 15.5a5 5 0 0 1 6 0"/><circle cx="12" cy="19" r="1" fill="currentColor" stroke="none"/></svg>
+          <h3>Wifi en todo el hospedaje</h3>
+          <p>Señal en habitaciones y espacios comunes.</p>
+        </div>
+        <div class="amenity reveal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 8h16M6 8V6a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v2M4 8v11a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V8"/><path d="M9 13h6"/></svg>
+          <h3>Cocina y heladeras</h3>
+          <p>Espacio compartido para cocinar tus propias comidas durante la estadía.</p>
+        </div>
+        <div class="amenity reveal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 21h16M6 21V11l6-6 6 6v10M9 21v-6h6v6"/></svg>
+          <h3>Quincho con parrilla</h3>
+          <p>Para un asado con el grupo, sin depender del clima.</p>
+        </div>
+        <div class="amenity reveal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 19h16M4 15h16M8 15v4M16 15v4M6 15V9a6 6 0 0 1 12 0v6"/></svg>
+          <h3>Salas de estar compartidas</h3>
+          <p>Espacios comunes para descansar o compartir con otros huéspedes.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- divider: dunas -->
+  <svg class="divider divider-dunas" viewBox="0 0 1200 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <rect width="1200" height="70" fill="#1C332A"/>
+    <path d="M0,40 C150,10 300,60 480,35 C650,10 800,55 980,30 C1080,15 1150,35 1200,25 L1200,70 L0,70 Z" fill="#C9A876"/>
+    <path d="M0,55 C200,35 380,68 560,50 C760,30 900,62 1200,45 L1200,70 L0,70 Z" fill="#F1E8D8"/>
+  </svg>
+
+  <!-- HABITACIONES -->
+  <section id="habitaciones">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">Las habitaciones</span>
+        <h2>Privadas, simples y cómodas.</h2>
+        <p>Con capacidad para parejas o grupos, todas con baño propio, TV y wifi.</p>
+      </div>
+      <div class="gallery">
+        <figure class="g-a reveal">
+          <img src="images/habitacion-doble.jpg" alt="Habitación privada con cama doble y mesas de luz" loading="lazy">
+          <figcaption>Habitación doble</figcaption>
+        </figure>
+        <figure class="g-b reveal">
+          <img src="images/habitacion-living.jpg" alt="Habitación con cucheta, TV y mesa" loading="lazy">
+          <figcaption>Habitación con cuchetas</figcaption>
+        </figure>
+        <figure class="g-c reveal">
+          <img src="images/habitacion-cuadruple.jpg" alt="Habitación con cuchetas y ropa de cama roja" loading="lazy">
+          <figcaption>Para grupos</figcaption>
+        </figure>
+        <figure class="g-d reveal">
+          <img src="images/habitacion-balcon.jpg" alt="Habitación con cucheta y balcón" loading="lazy">
+          <figcaption>Con balcón</figcaption>
+        </figure>
+        <figure class="g-e reveal">
+          <img src="images/bano.jpg" alt="Baño privado con inodoro, bidet y lavatorio" loading="lazy">
+          <figcaption>Baño privado</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- divider: mar -->
+  <svg class="divider divider-mar" viewBox="0 0 1200 70" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <rect width="1200" height="70" fill="#F1E8D8"/>
+    <path d="M0,45 C150,20 300,60 480,38 C650,18 800,55 980,32 C1080,20 1150,38 1200,28 L1200,70 L0,70 Z" fill="#3E7C7C"/>
+    <path d="M0,58 C200,42 380,68 560,52 C760,36 900,62 1200,48 L1200,70 L0,70 Z" fill="#FBF7EF"/>
+  </svg>
+
+  <!-- ESPACIOS COMPARTIDOS -->
+  <section class="bg-paper">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">Espacios compartidos</span>
+        <h2>Un lugar de estar, no solo de dormir.</h2>
+        <p>Patio, quincho con parrilla y cocina equipada para el grupo entero.</p>
+      </div>
+      <div class="gallery">
+        <figure class="g-b reveal">
+          <img src="images/quincho-parrilla.jpg" alt="Quincho con parrilla y mesa larga para comer" loading="lazy">
+          <figcaption>Quincho con parrilla</figcaption>
+        </figure>
+        <figure class="g-a reveal">
+          <img src="images/patio.jpg" alt="Patio con mesa y sillas al aire libre" loading="lazy">
+          <figcaption>Patio</figcaption>
+        </figure>
+        <figure class="g-c reveal">
+          <img src="images/cocina.jpg" alt="Cocina compartida con heladera y anafe" loading="lazy">
+          <figcaption>Cocina</figcaption>
+        </figure>
+        <figure class="g-d reveal">
+          <img src="images/pasillo.jpg" alt="Pasillo interno del hospedaje" loading="lazy">
+          <figcaption>Interior</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- UBICACION -->
+  <section id="ubicacion" class="bg-pine">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">Dónde estamos</span>
+        <h2>Ni tan cerca del ruido, ni tan lejos del mar.</h2>
+      </div>
+      <div class="location">
+        <div class="location-map reveal">
+          <iframe src="https://www.google.com/maps?q=Paseo+105+N%C2%BA+626,+Villa+Gesell,+Buenos+Aires&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa de ubicación en Villa Gesell"></iframe>
+        </div>
+        <div class="reveal">
+          <address>
+            <strong>Paseo 105 Nº 626, Villa Gesell</strong>
+          </address>
+          <ul class="distance-list">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 20c2-2 4-2 6 0s4 2 6 0 4-2 6 0M2 15c2-2 4-2 6 0s4 2 6 0 4-2 6 0"/><circle cx="12" cy="6" r="3"/></svg>
+              <span>A 6 cuadras del mar, ideal para ir caminando a la playa.</span>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 21h18M5 21V9l7-5 7 5v12M9 21v-6h6v6"/></svg>
+              <span>A 3 cuadras del centro, cerca de bares, comercios y el paseo de artesanos.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRECIO -->
+  <section id="precio" class="bg-paper">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="eyebrow">Precio</span>
+        <h2>Un precio claro, por persona y por día.</h2>
+      </div>
+      <div class="price-wrap reveal">
+        <div class="price-tag">
+          <span class="amount">$20.000</span>
+          <span class="unit">POR PERSONA / POR DÍA</span>
+        </div>
+        <div class="payment-methods">
+          <div class="item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="2" y="6" width="20" height="12" rx="2"/><path d="M2 10h20"/></svg>
+            Efectivo
+          </div>
+          <div class="item">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7 7h10a2 2 0 0 1 2 2v1H5V9a2 2 0 0 1 2-2Z"/><path d="M17 17H7a2 2 0 0 1-2-2v-1h14v1a2 2 0 0 1-2 2Z"/><path d="M3 10h6M15 14h6"/></svg>
+            Transferencia bancaria
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-cta reveal">
+      <h2>¿Consultás disponibilidad para tus fechas?</h2>
+      <a class="btn" href="https://wa.me/542255509346?text=Hola!%20Quiero%20consultar%20disponibilidad" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.36 5.07L2 22l5.11-1.34A9.94 9.94 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2Zm0 18c-1.63 0-3.15-.44-4.46-1.2l-.32-.19-3.03.8.81-2.95-.21-.31A7.94 7.94 0 0 1 4 12c0-4.41 3.59-8 8-8s8 3.59 8 8-3.59 8-8 8Zm4.4-5.85c-.24-.12-1.43-.7-1.65-.78-.22-.08-.38-.12-.54.12-.16.24-.62.78-.76.94-.14.16-.28.18-.52.06-.24-.12-1.02-.38-1.94-1.2-.72-.64-1.2-1.43-1.34-1.67-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.2-.47-.4-.4-.54-.41h-.46c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.7 2.6 4.12 3.64.58.25 1.03.4 1.38.51.58.18 1.11.16 1.53.1.47-.07 1.43-.58 1.63-1.15.2-.57.2-1.05.14-1.15-.06-.1-.22-.16-.46-.28Z"/></svg>
+        Escribinos por WhatsApp
+      </a>
+    </div>
+    <div class="footer-grid">
+      <div>
+        <strong>Ubicación</strong>
+        Paseo 105 Nº 626<br>Villa Gesell, Buenos Aires
+      </div>
+      <div>
+        <strong>Contacto</strong>
+        <a href="https://wa.me/542255509346">WhatsApp 2255 509346</a>
+      </div>
+      <div>
+        <strong>Pagos</strong>
+        Efectivo o transferencia
+      </div>
+    </div>
+  </div>
+</footer>
+
+<a class="float-wa" href="https://wa.me/542255509346?text=Hola!%20Quiero%20consultar%20disponibilidad" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.36 5.07L2 22l5.11-1.34A9.94 9.94 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2Zm0 18c-1.63 0-3.15-.44-4.46-1.2l-.32-.19-3.03.8.81-2.95-.21-.31A7.94 7.94 0 0 1 4 12c0-4.41 3.59-8 8-8s8 3.59 8 8-3.59 8-8 8Zm4.4-5.85c-.24-.12-1.43-.7-1.65-.78-.22-.08-.38-.12-.54.12-.16.24-.62.78-.76.94-.14.16-.28.18-.52.06-.24-.12-1.02-.38-1.94-1.2-.72-.64-1.2-1.43-1.34-1.67-.14-.24-.02-.37.1-.49.11-.11.24-.28.36-.42.12-.14.16-.24.24-.4.08-.16.04-.3-.02-.42-.06-.12-.54-1.3-.74-1.78-.2-.47-.4-.4-.54-.41h-.46c-.16 0-.42.06-.64.3-.22.24-.84.82-.84 2s.86 2.32.98 2.48c.12.16 1.7 2.6 4.12 3.64.58.25 1.03.4 1.38.51.58.18 1.11.16 1.53.1.47-.07 1.43-.58 1.63-1.15.2-.57.2-1.05.14-1.15-.06-.1-.22-.16-.46-.28Z"/></svg>
+</a>
+
+<script>
+  var els = document.querySelectorAll('.reveal');
+  if('IntersectionObserver' in window){
+    var obs = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting){ e.target.classList.add('is-visible'); obs.unobserve(e.target); }
+      });
+    }, { threshold: 0.15 });
+    els.forEach(function(el){ obs.observe(el); });
+  } else {
+    els.forEach(function(el){ el.classList.add('is-visible'); });
+  }
+</script>
+
+</body>
+</html>
